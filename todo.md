@@ -10,22 +10,22 @@
 
 **Niveau 1 - Opérations de Base**
 
-1. Fonction `charger_donnees(fichier: str) -> list`
+1. Fonction `charger_donnees(fichier: str) -> list` ok
    - Récupérer les données depuis un fichier.
    - Exemple d'entrée : Nom du fichier (ex. "FIFA-1998.txt").
-   - Exemple de sortie : Liste des lignes du fichier après récupération des données contenus dans le fichier d'entré.
+   - Exemple de sortie : Liste des lignes du fichier après récupération des données contenus dans le fichier d'entrée.
   
-2. Fonction `supprimer_entete(fichier: str) -> list`
+2. Fonction `supprimer_entete(fichier: str) -> list` ok
    - Supprime la première ligne (en-tête) du fichier txt.
    - Exemple d'entrée : Nom du fichier (ex. "FIFA-1998.txt").
    - Exemple de sortie : Liste des lignes du fichier après suppression de l'en-tête.
 
-3. Fonction `afficher_nom_trois_lettres(str) -> str`
-   - Affiche lun texte en utilisant uniquement les trois premières lettres.
+3. Fonction `afficher_nom_trois_lettres(str) -> str` ok
+   - Affiche un texte en utilisant uniquement les trois premières lettres.
    - Exemple d'entrée : Nom du fichier (.. Espagne, France).
    - Exemple de sortie : mot abrégé (ESP, FRA).
 
-4. Fonction `enregistrer_fichier("donnees, fichier.ext") -> fichier.ext`
+4. Fonction `enregistrer_fichier("donnees, fichier.ext") -> fichier.ext` ok
    - Enregistre les données dans un fichier.
    - Exemple d'entrée : données triées (.. France, Espagne, Argentine).
    - Exemple de sortie : FIFA_1998.txt à jour.
@@ -33,22 +33,22 @@
 **Niveau 2 - Calculs Statistiques**
 
 1. Fonction `melanger_lignes(donnee) -> list`
-   - Exemple d'entrée : Nom du fichier (ex. "FIFA-1998.txt").
+   - Exemple d'entrée : Nom du fichier (ex. "FIFA-1998.txt"). ok 
    - Exemple de sortie : Liste des lignes triées au hasard.
 
-2. Fonction `calculer_points(fichier: str) -> dict`
+2. Fonction `calculer_points(fichier: str) -> dict` ok
    - Calcule le nombre de points pour chaque équipe en fonction des victoires et des matchs nuls.
    - Exemple d'entrée : Nom du fichier (ex. "FIFA-1998.txt").
    - Exemple de sortie : Dictionnaire des équipes et de leurs points.
 
-3. Fonction `calculer_difference_buts(fichier: str) -> dict`
+3. Fonction `calculer_difference_buts(fichier: str) -> dict` ok
    - Calcule la différence de buts pour chaque équipe.
    - Exemple d'entrée : Nom du fichier (ex. "FIFA-1998.txt").
    - Exemple de sortie : Dictionnaire des équipes et de leur différence de buts.
 
 **Niveau 3 - Classement et Qualifications**
 
-1. Fonction `supprimer_colonne(fichier: str, nom_colonne: str) -> list`
+1. Fonction `supprimer_colonne(fichier: str, nom_colonne: str) -> list` ok
    - Supprime la colonne spécifiée du fichier txt.
    - Exemple d'entrée : Nom du fichier (ex. "FIFA-1998.txt"), nom de la colonne (ex. "Position").
    - Exemple de sortie : Liste des lignes du fichier après suppression de la colonne.
