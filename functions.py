@@ -13,13 +13,15 @@ def sansentete():
       lines = load.readlines()
       lines = lines[1:]
 
-  for lignes in lines:
-      lignes = lignes.strip()
-      print(lignes)    
   with open("FIFA_World_Cup/FIFA-2022_No_Header.txt", "w") as noheader_ext:
 
     for nom in lines: 
-        noheader_ext.write('\n'.join(lignes))   
+        noheader_ext.write('\n'.join(lignes))  
+  for lignes in lines:
+      lignes = lignes.strip()
+      print(lignes) 
+
+ 
    
  #Trier les données
 
