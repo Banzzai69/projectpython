@@ -1,6 +1,6 @@
 import os
 
-#lecture du fichier FIFA-2022.txt
+# #lecture du fichier FIFA-2022.txt
 
 def load_data(FileName):
   with open(FileName, "r") as load:
@@ -8,22 +8,15 @@ def load_data(FileName):
 
 #Enleve l'entete 
      
-def sansentete():
-  with open(load_data) as load:
-      lines = load.readlines()
-      lines = lines[1:]
-
-  with open("FIFA_World_Cup/FIFA-2022_No_Header.txt", "w") as noheader_ext:
-
-    for nom in lines: 
-        noheader_ext.write('\n'.join(lignes))  
+  with open("FIFA_World_Cup/FIFA-2022.txt") as noheader:
+      lines = noheader.readlines()[1:]
+      
   for lignes in lines:
       lignes = lignes.strip()
-      print(lignes) 
-
- 
-   
+      print(lignes)
+         
  #Trier les données
+import pandas 
 
 data = [
 "1,Argentina,7,6,0,1,15,8,7,18",
@@ -73,23 +66,20 @@ for nom in nom_pays:
 
 #Enregistrer fichiers avec modifications
 
-
     nom_equipe_triee = sorted(nom_pays) 
-    
 
 with open("FIFA_World_Cup/FIFA-2022_Trie.txt", "w") as fichiers_ext:
 
  for nom in nom_equipe_triee: 
-        fichiers_ext.write('\n'.join(nom_equipe_triee)) 
-
-
+        fichiers_ext.write('\n'.join(nom_equipe_triee))
+fichiers_ext.close()
 #melanger les données
 import random
 
 nouveau_classement = data[:]
 
 random.shuffle(nouveau_classement)
-print(nouveau_classement)
+print('\n'.join(nouveau_classement))
 
 #Nombre de points pour chaque equipe
 
@@ -107,8 +97,7 @@ for ligne in data:
 for nom_pays, points in nombre_point.items():
     
     print(f"{nom_pays}: {points} point(s)")
-    
-
+ 
 #Calculer la difference de but
 nombre_buts = {}
 
@@ -124,7 +113,6 @@ for ligne in data:
 for nom_pays, buts in nombre_buts.items():
     print(f"{nom_pays}: {buts} but(s)")
 
-
 #supprimer une colonne
 
 import pandas as deleted_column
@@ -134,4 +122,3 @@ df.drop(df.iloc[:, 1:3], inplace=True, axis=1)
 
 #  Trie les equipes par nom
 
-  
