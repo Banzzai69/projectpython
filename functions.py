@@ -16,7 +16,7 @@ def load_data(FileName):
       print(lignes)
          
  #Trier les données
-import pandas 
+    import pandas 
 
 data = [
 "1,Argentina,7,6,0,1,15,8,7,18",
@@ -66,13 +66,13 @@ for nom in nom_pays:
 
 #Enregistrer fichiers avec modifications
 
-    nom_equipe_triee = sorted(nom_pays) 
+filename = "FIFA_World_Cup/FIFA-2022_Trie.txt"
 
-with open("FIFA_World_Cup/FIFA-2022_Trie.txt", "w") as fichiers_ext:
+with open(filename, mode='w') as file:
+    for equipe in nom_equipe_triee:
+        file.write(equipe + '\n')
 
- for nom in nom_equipe_triee: 
-        fichiers_ext.write('\n'.join(nom_equipe_triee))
-fichiers_ext.close()
+print(f"Données triées enregistrées avec succès dans {filename}")
 #melanger les données
 import random
 
