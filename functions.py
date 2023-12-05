@@ -16,7 +16,7 @@ def load_data(FileName):
       print(lignes)
          
  #Trier les données
-    import pandas 
+import pandas as data
 
 data = [
 "1,Argentina,7,6,0,1,15,8,7,18",
@@ -65,11 +65,10 @@ for nom in nom_pays:
     print (trois_premieres_lettres)
 
 #Enregistrer fichiers avec modifications
-
 filename = "FIFA_World_Cup/FIFA-2022_Trie.txt"
 
 with open(filename, mode='w') as file:
-    for equipe in nom_equipe_triee:
+    for equipe in nom_pays:
         file.write(equipe + '\n')
 
 print(f"Données triées enregistrées avec succès dans {filename}")
@@ -121,4 +120,6 @@ df = deleted_column.DataFrame(data)
 df.drop(df.iloc[:, 1:3], inplace=True, axis=1)
 
 #  Trie les equipes par nom
+
+filename="FIFA_World_Cup/FIFA-2022_abregee_Trie.txt"
 

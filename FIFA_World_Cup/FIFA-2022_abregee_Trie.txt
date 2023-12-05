@@ -1,7 +1,2 @@
-Q
-a
-tQ
-a
-tQ
-a
-t
+Arg
+Qat
