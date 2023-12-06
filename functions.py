@@ -123,3 +123,12 @@ df.drop(df.iloc[:, 1:3], inplace=True, axis=1)
 
 filename="FIFA_World_Cup/FIFA-2022_abregee_Trie.txt"
 
+filename="equipes_triees.txt"
+for ligne in data:
+    colonnes = ligne.split(',')
+    nom_equipe_triee.append(colonnes[1])
+
+
+for nom in nom_equipe_triee:
+    trois_premieres_lettress = nom[:3]
+    print (trois_premieres_lettress)
