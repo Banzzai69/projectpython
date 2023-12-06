@@ -59,7 +59,7 @@ for ligne in data:
     colonnes = ligne.split(',')
     nom_pays.append(colonnes[1])
 
-
+nom_equipe_triee= sorted(nom_pays)
 for nom in nom_pays:
     trois_premieres_lettres = nom[:3]
     print (trois_premieres_lettres)
@@ -128,7 +128,8 @@ for ligne in data:
     colonnes = ligne.split(',')
     nom_equipe_triee.append(colonnes[1])
 
-
 for nom in nom_equipe_triee:
     trois_premieres_lettress = nom[:3]
     print (trois_premieres_lettress)
+    
+    
