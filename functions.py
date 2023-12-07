@@ -62,10 +62,18 @@ for ligne in datas:
 #Afficher les noms des equipes en 3 lettres
 
 nom_equipe_triee= sorted(nom_pays)
+
+
 for nom in nom_pays:
     trois_premieres_lettres = nom[:3]
-    print (trois_premieres_lettres)
+    # print (trois_premieres_lettres)
 
+chemin = "3lettes.txt"
+with open(chemin, mode="w") as mon_fichier2:
+    mon_fichier2.write("3lettres" + '\n')
+    mon_fichier2.write('\n'.join(map(str, trois_premieres_lettres)))
+    
+    
 #Enregistrer fichiers avec modifications
 filename = "FIFA_World_Cup/FIFA-2022_Trie.txt"
 
@@ -78,14 +86,16 @@ print(f"Données triées enregistrées avec succès dans {filename}")
 import random
 
 nouveau_classement = datas[:]
-
+# Assuming nouveau_classement is your list
 random.shuffle(nouveau_classement)
-print('\n'.join(nouveau_classement))
+
+print('\n'.join(map(str, nouveau_classement)))
 
 chemin = "new_class.txt"
-with open(chemin, mode = "w") as mon_fichier:
-  mon_fichier.write("new_class"+'\n')
-  mon_fichier.writelines(repr(nouveau_classement))
+with open(chemin, mode="w") as mon_fichier1:
+    mon_fichier1.write("new_class" + '\n')
+    mon_fichier1.write('\n'.join(map(str, nouveau_classement)))
+
 
 #Nombre de points pour chaque equipe
 
